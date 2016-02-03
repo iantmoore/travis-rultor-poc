@@ -16,6 +16,11 @@
 	<name>a little poc</name>
 	<description>a poc</description>
 
+	<scm>
+		<connection>scm:git:https://github.com:Substeps/substeps-framework.git</connection>
+		<developerConnection>scm:git:git@github.com:Substeps/substeps-framework.git</developerConnection>
+		<url>https://github.com/Substeps/substeps-framework.git</url>
+	</scm>
 
 
 	<properties>
