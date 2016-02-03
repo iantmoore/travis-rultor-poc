@@ -1,0 +1,50 @@
+language: java
+
+sudo: false
+
+jdk: oraclejdk8
+
+script: mvn deploy
+
+ #--settings travis/settings.xml
+
+
+#deploy:
+#  - provider: script
+#    skip_cleanup: true
+#    script: mvn deploy --settings travis/settings.xml
+#    on:
+#      repo: Substeps/substeps-framework
+#      branch: master
+#
+#  - provider: releases
+#    skip_cleanup: true
+#    api_key:
+#      secure:
+#    file:
+#      - ./api/target/substeps-core-api.jar
+#      - ./api/target/substeps-core-api-tests.jar
+#      - ./api/target/substeps-core-api-sources.jar
+#      - ./api/target/substeps-core-api-javadoc.jar
+#      - ./core/target/substeps-core.jar
+#      - ./core/target/substeps-core-tests.jar
+#      - ./core/target/substeps-core-javadoc.jar
+#      - ./core/target/substeps-core-sources.jar
+#      - ./runner/Junit/target/substeps-junit-runner-javadoc.jar
+#      - ./runner/Junit/target/substeps-junit-runner-sources.jar
+#      - ./runner/Junit/target/substeps-junit-runner.jar
+#      - ./runner/Maven/target/substeps-maven-plugin-javadoc.jar
+#      - ./runner/Maven/target/substeps-maven-plugin.jar
+#      - ./runner/Maven/target/substeps-maven-plugin-sources.jar
+#      - ./runner/Ant/target/substeps-ant-runner.jar
+#      - ./runner/Ant/target/substeps-ant-runner-sources.jar
+#      - ./runner/Ant/target/substeps-ant-runner-javadoc.jar
+#      - ./runner/Common/target/substeps-runner-common-sources.jar
+#      - ./runner/Common/target/substeps-runner-common.jar
+#      - ./runner/Common/target/substeps-runner-common-javadoc.jar
+#      - ./glossary/target/substeps-glossary-builder.jar
+#      - ./glossary/target/substeps-glossary-builder-javadoc.jar
+#      - ./glossary/target/substeps-glossary-builder-sources.jar
+#    on:
+#      repo: Substeps/substeps-framework
+#      tags: true
