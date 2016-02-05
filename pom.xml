@@ -93,6 +93,27 @@
 						<!-- TODO: Add Travis-CI configuration for SCM access -->
 					</configuration>
 				</plugin>
+
+
+				<plugin>
+					<groupId>org.sonatype.plugins</groupId>
+					<artifactId>nexus-staging-maven-plugin</artifactId>
+					<version>1.6.6</version>
+
+					<extensions>true</extensions>
+					<configuration>
+
+						<serverId>oss.sonatype.org</serverId>
+						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+						<tags>
+							<javaVersion>r${java.version}</javaVersion>
+						</tags>
+
+						<!-- TODO: Turn back on after first Travis release -->
+						<autoReleaseAfterClose>false</autoReleaseAfterClose>
+					</configuration>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
 
