@@ -14,6 +14,7 @@
 	<packaging>jar</packaging>
 	<name>a little poc</name>
 	<description>a poc</description>
+	<url>https://github.com/iantmoore/travis-rultor-poc</url>
 
 	<scm>
 		<connection>scm:git:https://github.com:Substeps/substeps-framework.git</connection>
@@ -22,6 +23,13 @@
 	  <tag>HEAD</tag>
   </scm>
 
+	<licenses>
+		<license>
+			<name>LGPL 3.0 license</name>
+			<url>http://www.opensource.org/licenses/lgpl-3.0.html</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,6 +46,18 @@
 		<slf4j.version>1.7.13</slf4j.version>
 
 	</properties>
+
+
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+
 
 	<dependencies>
 
@@ -82,7 +102,7 @@
 					<version>2.5.3</version>
 
 					<configuration>
-						<tagNameFormat>@{project.version}</tagNameFormat>
+						<tagNameFormat>@{project.version}</tagNameFormat>/
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<useReleaseProfile>false</useReleaseProfile>
 						<releaseProfiles>release</releaseProfiles>
