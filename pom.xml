@@ -56,7 +56,17 @@
 		</snapshotRepository>
 	</distributionManagement>
 
-
+	<developers>
+		<developer>
+			<id>ianmoore</id>
+			<name>Ian Moore</name>
+			<organization>me</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
 
 
 	<dependencies>
