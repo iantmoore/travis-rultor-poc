@@ -15,6 +15,8 @@ release:
       mvn clean deploy -Prelease -PSubsteps.org --settings /home/r/settings.xml
       mvn versions:set "-DnewVersion=${newSnapshotVersion}"
       git commit -am "prepare next version"
+      git checkout master
+      git merge __rultor
 
 
 #    mvn clean
