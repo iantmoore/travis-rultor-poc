@@ -8,8 +8,10 @@ decrypt:
   secring.gpg: "repo/secring.gpg.asc"
 release:
   script: |-
-    mvn clean
-    mvn release:prepare release:perform -B -PSubsteps.org --settings /home/r/settings.xml
+  echo " ******** NEW TAG : ${tag} ************"
+  echo " ******** NExt TAG : ${nextVersion} ************"
+#    mvn clean
+#    mvn release:prepare release:perform -B -PSubsteps.org --settings /home/r/settings.xml
   commanders:
     - iantmoore
 
